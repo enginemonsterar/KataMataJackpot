@@ -60,17 +60,17 @@ public class Slot : MonoBehaviour
 
         //Set before item
         if(choosedItemIndex == 0)
-            beforePrizeIndex = SlotManager.Instance.GetPrizeSprites().Length - 1;
+            beforePrizeIndex = SlotManager.Instance.GetItemSprites().Length - 1;
         
-        if(choosedItemIndex == SlotManager.Instance.GetPrizeSprites().Length - 1)
+        if(choosedItemIndex == SlotManager.Instance.GetItemSprites().Length - 1)
             afterPrizeIndex = 0;
         
         //
-        resultSlotItem.transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = SlotManager.Instance.GetPrizeSprite(beforePrizeIndex);
+        resultSlotItem.transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = SlotManager.Instance.GetItemSprite(beforePrizeIndex);
         //
-        resultSlotItem.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = SlotManager.Instance.GetPrizeSprite(prizeIndex);
+        resultSlotItem.transform.GetChild(1).GetChild(0).GetComponent<Image>().sprite = SlotManager.Instance.GetItemSprite(prizeIndex);
         //
-        resultSlotItem.transform.GetChild(2).GetChild(0).GetComponent<Image>().sprite = SlotManager.Instance.GetPrizeSprite(afterPrizeIndex);
+        resultSlotItem.transform.GetChild(2).GetChild(0).GetComponent<Image>().sprite = SlotManager.Instance.GetItemSprite(afterPrizeIndex);
         
         
 
@@ -88,15 +88,23 @@ public class Slot : MonoBehaviour
         StartCoroutine(Rolling());
     }
 
-    public void StopRolling(){
+    public void StopRolling(float delay){
+        StartCoroutine(StopRolling_(delay));
+    }
+    IEnumerator StopRolling_(float delay){
+        yield return new WaitForSeconds(delay); 
         rolling = false;
         resultSlotItem.SetActive(true);
         content.SetActive(false);
 
         //set result item
-        SetChoosedItem();
-
-       
+        SetChoosedItem();       
+        
+        // if(transform.GetSiblingIndex() == 2){            
+        //     yield return new WaitForSeconds(1); 
+        //     PrizeManager.Instance.CheckResult();
+            
+        // }
         
     }
 
@@ -105,13 +113,13 @@ public class Slot : MonoBehaviour
         content.SetActive(true);
         
         yield return new WaitForSeconds(2);        
-        StopRolling();
+        // StopRolling();
 
         //For Auto Rolling
-        if(transform.GetSiblingIndex() == 0){
-            yield return new WaitForSeconds(2);        
-            SlotManager.Instance.GoRolling();
-        }
+        // if(transform.GetSiblingIndex() == 0){
+        //     yield return new WaitForSeconds(2);        
+        //     SlotManager.Instance.GoRolling();
+        // }
     }
 
     

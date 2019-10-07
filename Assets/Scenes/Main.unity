@@ -5336,7 +5336,7 @@ MonoBehaviour:
   - {fileID: 1341162528}
   - {fileID: 1884626538}
   - {fileID: 1888160440}
-  prizeSprites:
+  itemSprites:
   - {fileID: 21300000, guid: 0b303eb4dfe26b64b983b54dd4c1e8ef, type: 3}
   - {fileID: 21300000, guid: 407fb08d120d24449bf2350dca841918, type: 3}
   - {fileID: 21300000, guid: c83c0de534e4a27419eac18d581033fe, type: 3}
@@ -6395,6 +6395,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3955447d792023f4f83b245bfa5d2e2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prizeSprites:
+  - {fileID: 21300000, guid: 0b303eb4dfe26b64b983b54dd4c1e8ef, type: 3}
+  - {fileID: 21300000, guid: 407fb08d120d24449bf2350dca841918, type: 3}
+  - {fileID: 21300000, guid: c83c0de534e4a27419eac18d581033fe, type: 3}
+  - {fileID: 21300000, guid: 8d7b2d3af30e1494781261e1e28d3262, type: 3}
+  - {fileID: 21300000, guid: b15cb82216dd73140afb07da2cd49a01, type: 3}
+  - {fileID: 21300000, guid: dfc684a64a9af2d4f8786ca9c03e72b3, type: 3}
 --- !u!1 &1846566908
 GameObject:
   m_ObjectHideFlags: 0

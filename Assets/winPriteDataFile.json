@@ -1,1 +1,40 @@
-{"Day":4,"Hour":10,"Minute":58,"PrizeIndex":5}
+{
+    "Items": [
+        {
+            "Day": 7,
+            "Hour": 10,
+            "Minute": 26,
+            "PrizeIndex": 2
+        },
+        {
+            "Day": 7,
+            "Hour": 16,
+            "Minute": 43,
+            "PrizeIndex": 0
+        },
+        {
+            "Day": 7,
+            "Hour": 16,
+            "Minute": 43,
+            "PrizeIndex": 1
+        },
+        {
+            "Day": 7,
+            "Hour": 16,
+            "Minute": 43,
+            "PrizeIndex": 3
+        },
+        {
+            "Day": 7,
+            "Hour": 16,
+            "Minute": 44,
+            "PrizeIndex": 4
+        },
+        {
+            "Day": 7,
+            "Hour": 16,
+            "Minute": 50,
+            "PrizeIndex": 5
+        }
+    ]
+}
